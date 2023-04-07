@@ -5,18 +5,43 @@
 | Group 11:       |   |
 |-----------------|---|
 | Jam Ivy Gammuac |   |
-| Thomas Kusinski                |   |
-| Austin Lee                |   |
-| Shanelle Li Chit Khim                |   |
+| Thomas Kusinski |   |
+| Austin Lee      |   |
+| Shanelle Li Chit Khim |   |
 
 # Introduction
-This lab was conducted to gain experience with measuring the reliability of a system using reliability assessment tools. Two techniques of assessing failure data were used: reliability growth testing and reliability demonstration chart. The failure data we analyzed was the data contained in Failure Report #9 which was provided in the lab artifacts. The tools used for this lab were: SFRAT for reliability growth testing and RDC excel sheet for the reliability demonstration chart. From these two exercises we were able to learn how to analyze test data to determine the reliability of an SUT, as well as gain an understanding of when it is useful to use different techniques of failure data assessment.
+This lab was conducted to gain experience with measuring the reliability of a system using reliability assessment tools. Two techniques of assessing failure data were used: reliability growth testing and reliability demonstration chart. The failure data we analyzed was the data contained in Failure Report #9 which was provided in the lab artifacts. The tools used for this lab were: SFRAT for reliability growth testing and RDC-11 excel sheet for the reliability demonstration chart. From these two exercises we were able to learn how to analyze test data to determine the reliability of an SUT, as well as gain an understanding of when it is useful to use different techniques of failure data assessment.
 
 # 
 
 # Assessment Using Reliability Growth Testing 
+We used the testing tool SFRAT to analyze the data contained in Failure Report #9.
+
+## Plots of Failure Data
+Using SFRAT we generated time-between failure, failure intensity, and reliability graphs for the data in Failure Report #9.
+
+### Time Between Failures Plot
+![](./media/TBF.jpg)
+
+### Failure Intensity Plot
+![](./media/Intensity.jpg)
+
+### Cumulative Failures Plot
+![](./media/Cumulative.jpg)
+
+## Model Comparison (Determining top two models in SFRAT):
+To compare the models, and determine which two models would provide the best fit for Failure Report #9, we used SFRAT to make predictions on the given data for every model that was available on SFRAT giving us the following plots below. 
 
 
+### Cumulative Failures Plot With All Model Predictions
+![](./media/All_Models.jpg)
+
+### AIC scores of models
+![](./media/AIC_Scores.jpg)
+
+Best Two Models: Delayed S-shaped and Weibull models
+
+Reasoning: To determine the top two models, we used the AIC criterion which evaluates how well a model fits it’s dataset, with a lower AIC indicating a better fit, and a higher AIC indicating a worse fit to the dataset and an increased likelihood to overfit. Comparing the AIC scores of each model, we see that the Delayed S-shaped model and the Weibull model are the models that give the best fit for this dataset.
 
 
 
@@ -35,7 +60,7 @@ In this lab we were not provided with a target failure rate but, if the given ta
 
 
 # Assessment Using Reliability Demonstration Chart 
-Using Failure Report 9 data
+Using Failure Report 9 data:
 
 Using the RDC-11 excel spreadsheet that was provided in the A5-artifacts, we prepared 3 plots for the failure data in Failure Report #9. For each of these plots, we used typical (default) values of the discrimination ratio of 2.0, the customer risk at 0.1 (10%), and the developer risk at 1.0 (10%). 
 
@@ -94,6 +119,6 @@ RDC disadvantages:
 # 
 
 # Difficulties encountered, challenges overcome, and lessons learned
-While trying to work with the SRTAT and CS-FRAT tools, we encountered several challenges. One of the significant challenges was dealing with the wrong format of data files, which required conversion to the right format. However, even after converting the data files, they would not necessarily work, causing further confusion and delays. In addition, for CS-FRAT, we learned that we had to have a specific format for the data consisting of five columns, two of which were unclear, which added more complexity to the process. Ultimately, to overcome these obstacles, we had to resort to using one of the sample data files provided with the tools, which may not have been an ideal solution, but it allowed us to proceed with the lab.
+While trying to work with the SRTAT and CS-FRAT tools, we encountered several challenges. One of the significant challenges was dealing with the wrong format of data files, which required conversion to the right format. However, even after converting the data files, they would not necessarily work, causing further confusion and delays. In addition, for CS-FRAT, we learned that we had to have a specific format for the data consisting of five columns, two of which were unclear, which added more complexity to the process. We eventually discovered that we were able to use SFRAT using one of the failure data documents provided in the lab artifacts, though some additional steps were needed as we had to convert the document file to the correct format for SFRAT to read the data.
 
 # Comments/feedback on the lab itself
