@@ -16,6 +16,24 @@ This lab was conducted to gain experience with measuring the reliability of a sy
 
 # Assessment Using Reliability Growth Testing 
 
+
+
+
+
+
+
+## Decision Making Using a Given Failure Rate:
+To make a decision about the system’s reliability, when using a given target failure rate as criteria, you should compare the target failure rate to what the system’s current failure rate is at and use the results of that comparison to guide your decision. For example if the system’s current failure rate is more than the target failure rate, this indicates more failures are occurring than what is acceptable so testing should continue as the system has not yet reached the target acceptable level of reliability. 
+
+In our system under test, we used data from Failure Report #9. As displayed in the calculations below, we calculated the MTTF of the system and calculated the reciprocal of the calculated MTTF to obtain the system’s current failure rate at 0.00952381 failures per second. 
+
+![](./media/Formula.jpg)
+
+
+In this lab we were not provided with a target failure rate but, if the given target failure rate were to be a smaller value than our SUT’s current failure rate of 0.00952381 failures per second, then that indicates the system is not at an acceptable level of reliability yet so the decision that should be made is to continue testing. If the given target failure rate were to be a larger value than our SUT’s current failure rate of 0.00952381 failures per second, then that indicates the system is at an acceptable level of reliability indicating that the system is ready for release and the decision to release the system can be made.
+
+
+
 # Assessment Using Reliability Demonstration Chart 
 Using Failure Report 9 data
 
@@ -33,6 +51,18 @@ MTTFmin = MTTF = Total Testing Time/Total Number of Failures =3150 seconds/30 fa
 
 ## Plot for MTTFmin:
 ![](./media/RDC_MTTFMin.jpg)
+
+This RDC plot uses the regular value of MTTFmin at 105 seconds per failure, therefore the target Failure Intensity Objective (FIO) is 0.00952381 failures per second. As displayed in the plot, for a brief moment at the beginning, the system is in the continue region but soon after moves into the accept region and stays in the accept region until the end of testing.
+
+## Plot for half of MTTFmin:
+![](./media/RDC_MTTFHalf.jpg)
+
+This RDC plot uses the regular value of half the MTTFmin at 52.5 seconds per failure, therefore the target Failure Intensity Objective (FIO) is 0.01904762 failures per second. As displayed in the plot, the system is in the accept region for all of the testing, this is because the MTTF value was halved resulting in a FIO where more failures are acceptable within a given time period.
+
+## Plot for twice MTTFmin:
+![](./media/RDC_MTTFTwice.jpg)
+
+This RDC plot uses the regular value of double the MTTFmin at 210 seconds per failure, therefore the target Failure Intensity Objective (FIO) is 0.0047619 failures per second. As displayed in the plot, the system starts in the continue region, but then enters and remains in the reject region until the end of testing. This is because the MTTF value was doubled resulting in a stricter acceptance condition with a FIO where less failures are acceptable within a given time period.
 
 # 
 
