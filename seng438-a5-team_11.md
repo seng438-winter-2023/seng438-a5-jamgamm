@@ -85,13 +85,13 @@ In our system under test, we used data from Failure Report #9. As displayed in t
 In this lab we were not provided with a target failure rate but, if the given target failure rate were to be a smaller value than our SUT’s current failure rate of 0.00952381 failures per second, then that indicates the system is not at an acceptable level of reliability yet so the decision that should be made is to continue testing. If the given target failure rate were to be a larger value than our SUT’s current failure rate of 0.00952381 failures per second, then that indicates the system is at an acceptable level of reliability indicating that the system is ready for release and the decision to release the system can be made.
 
 #
-## Reliability Growth Testing advantages:
+### Reliability Growth Testing advantages:
 * Can use inter failure time and/or failure count
 * Aids in tracking bugs in pre-release
 * Data can be analyzed through trend tests, which help decide if system is having reliability growth, decrease, or stability
 * Provides a means to quantify the reliability improvement during testing and development
 
-## Reliability Growth Testing disadvantages:
+### Reliability Growth Testing disadvantages:
 * Requires large data set and data needs to be accurate
 * Requires specific testing tools to actually perform
 
@@ -128,13 +128,13 @@ This RDC plot uses the regular value of double the MTTFmin at 210 seconds per fa
 
 # 
 
-## RDC advantages:
+### RDC advantages:
 * Very fast and easy way to analyze data
 * Very reusable
 * Can be used with smaller along with larger data sets
 * Outputs a simple visual chart, making it easier to interpret and assess reliability 
 
-## RDC disadvantages:
+### RDC disadvantages:
 * Does not specifically say what is the root cause of failures that affect the reliability
 * Only really gives a yes or no answer upon the reliability of the SUT where it is either acceptable or not
 
