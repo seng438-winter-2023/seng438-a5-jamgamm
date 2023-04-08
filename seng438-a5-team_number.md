@@ -55,7 +55,7 @@ Reasoning: To determine the top two models, we compared their AIC(Akaike Informa
 
 ## Model Prediction Results:
 
-Using SFRAT, we generated plots of the SUT with the predictions of the chosen Inflexion S-shaped model and the Delayed S-Shaped model. In the failure intensity graph, we can see that both models predict that the failure intensity decreases in the future with the Inflexion S-shaped model predicting a faster decrease in failure intensity. With respect to the reliability plot, both models predict that for future testing, there will be steady reliability growth with the Inflexion S-shaped model predicting a faster rate of reliability growth. 
+Using SFRAT, we generated plots of the SUT with the predictions of all the models, however we focused on the chosen top two models, the Inflexion S-shaped model and the Delayed S-Shaped model. In the failure intensity graph, we can see that both top two models predict that the failure intensity decreases in the future with the Inflexion S-shaped model predicting a faster decrease in failure intensity. With respect to the reliability plot, both models predict that for future testing, there will be steady reliability growth with the Inflexion S-shaped model predicting a faster rate of reliability growth at the end. 
 #
 ## Range Analysis
 We performed a range analysis on the dataset using SFRAT’s built in laplace test and Running Average Trend Test to help select the range of useful data.
